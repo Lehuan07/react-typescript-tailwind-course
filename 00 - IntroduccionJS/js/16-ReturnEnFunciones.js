@@ -1,6 +1,6 @@
 //funtion Expression
 
-export const sumar = function(num1 = 0, num2 = 0){
+const sumar = function(num1 = 0, num2 = 0){
     return num1+num2
 }
 
@@ -16,4 +16,7 @@ console.log(resultadoResta)
 
 // dividir =(num1 = 0, num2 = 0) => return num1/num2 //Da error por que es en una sola linea
 
-
+export{
+    sumar,
+    restar
+}

@@ -1,7 +1,7 @@
-import {sumar} from "./16-ReturnEnFunciones.js"
+import {sumar as funcionSumar} from "./16-ReturnEnFunciones.js"
 
-const resultado = sumar (20, 30)
+const resultado = funcionSumar (20, 30)
 
 console.log(resultado)
 
-//En el html en el script se pone  type="module
+//En el html en el script se pone  type="module 
