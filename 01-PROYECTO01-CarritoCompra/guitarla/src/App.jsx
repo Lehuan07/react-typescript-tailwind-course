@@ -7,6 +7,7 @@ import { useState } from "react";
 function App() {
 
     const [data, setData] = useState(database)
+    const [cart, setCart] = useState([])
 
     return (
         <>
@@ -21,6 +22,7 @@ function App() {
                     <Guitar 
                     key={guitar.id}
                     guitar={guitar}
+                    setCart={setCart}
                     />
                 )
                 )}
