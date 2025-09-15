@@ -28,11 +28,38 @@ function App() {
         setCart(prevcart => prevcart.filter(guitar => guitar.id !== id));
     }
 
+    function increaseQuantity(id){
+        const itemExists = cart.findIndex((guitar) => guitar.id === id);
+
+        if (itemExists >= 0) {
+            const updateCart = [...cart];
+            updateCart[itemExists].quantity += 1;
+            setCart(updateCart);
+        }
+    }
+
+    function decreaseQuantity(id){
+        const itemExists = cart.findIndex((guitar) => guitar.id === id);
+
+        if (itemExists >= 0) {
+            const updateCart = [...cart];
+            updateCart[itemExists].quantity -= 1;
+
+            if (updateCart[itemExists].quantity === 0) {
+                updateCart.splice(itemExists, 1);
+            }
+
+            setCart(updateCart);
+        }
+    }
+
     return (
         <>
         <Header 
         cart ={cart}
         removeFromCart={removeFromCart}
+        increaseQuantity={increaseQuantity}
+        decreaseQuantity={decreaseQuantity}
         />
         
 
